@@ -9,6 +9,7 @@ kwargs = {
     'description': 'Generate SNS alerts from any command.',
     'author': 'Brandon Adams',
     'author_email': 'brandon.adams@me.com',
+    'url': 'https://github.com/adamsb6/alert_from_script',
     'packages': ['alert_from_script'],
     'install_requires': [
         'boto>=2.12.0',
