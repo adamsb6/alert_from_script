@@ -13,14 +13,15 @@ def main():
     parser.add_argument('script', type=str, help='The script to run. Includes all args to run.')
     parser.add_argument('--aws-access-key-id',type=str, help='Optional AWS Access Key Id.  Will use environment variables and instance profiles if not set.')
     parser.add_argument('--aws-secret-access-key',type=str, help='Optional AWS Access Key Id.  Will use environment variables and instance profiles if not set.')
+    args = parser.parse_args()
     
     if args.aws_access_key_id:
         os.environ['AWS_ACCESS_KEY_ID'] = args.aws_access_key_id
     if args.aws_secret_access_key:
         os.environ['AWS_SECRET_ACCESS_KEY'] = args.aws_secret_access_key
     
-    args = parser.parse_args()
-
+    sns_conn = boto.connect_sns()
+    
     stdout = tempfile.TemporaryFile()
     stderr = tempfile.TemporaryFile()
     

@@ -5,7 +5,7 @@ import sys
 
 kwargs = {
     'name': 'alert-from-script',
-    'version': '0.1.1',
+    'version': '0.1.2',
     'description': 'Generate SNS alerts from any command.',
     'author': 'Brandon Adams',
     'author_email': 'brandon.adams@me.com',
